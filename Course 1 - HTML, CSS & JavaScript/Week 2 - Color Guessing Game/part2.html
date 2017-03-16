@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lucas Rodrigues - JavaScript Assignment!</title>
+        <meta name="author" content="Lucas Rodrigues">
+    </head>
+
+    <body onload="do_game()">
+        <script type="text/javascript" charset="utf-8">
+            var colors = ["azure", "black", "blue", "brown", "cyan", "gold",
+                "green", "gray", "magenta", "navy", "orange", "pink", "red",
+                "silver", "violet"];
+            
+            var target;
+            var count = 0;
+            var finished = false;
+            var guess_input;
+            
+            function do_game() 
+            {
+                colors.sort();
+                target = Math.floor(Math.random() * colors.length);
+                console.log(target);
+                do 
+                {
+                    guess_input = prompt(
+                        "I am thinking of one of these colors\n\n" + colors +
+                        "\n\nWhat color am I thinking of?");
+                    count ++;
+                } while (check_guess());
+            }
+        
+            function check_guess() 
+            {
+                var idx = colors.indexOf(guess_input);
+                if (idx < 0)
+                    alert("Sorry, I do not recognize that color!\n\n" + "Please try again.");
+                else if (idx > target)
+                    alert("Sorry, your guess is not correct!\n\n" + "Hint: Your input is alphabetically HIGHER than mine!\n\n" + "Please try again.");
+                else if (idx < target)
+                    alert("Sorry, your guess is not correct!\n\n" + "Hint: Your input is alphabetically LOWER than mine!\n\n" + "Please try again.");
+                else 
+                {
+                    elem_body = document.getElementsByTagName("body")[0];
+                    elem_body.style.background = colors[target];
+                    alert("Congratualtions! You have guessed the color!\n\n" + "It took you " + count + " guesses to finish the game!\n\n" + "You can see the color in the background.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>
