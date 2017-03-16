@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Peer Graded Assignment</title>
+		<meta name="author" content="Lucas Rodrigues">
+
+		<style>
+			fieldset {background: lightyellow; border: 10px solid yellow; margin-bottom: 10px; width: 720px;} 
+			textarea {width: 360px; height: 50px}
+			label:hover { font-size:20px }
+			input:hover { font-size:20px }
+			label {display: inline-block; text-align: right; vertical-align: top; width: 180px;}
+			.left{text-align: center; width:50px; color:white; background: darkred; padding:4px;}
+			.right{text-align: center; width:50px; color:white; background: purple; padding:4px;}
+			.cbr{width: auto;}
+		</style>			
+	</head>
+
+	<body>
+		<h1>Please Enter Your Details For Our Dating Website!</h1> <br>
+		<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form­-data">
+			<fieldset>
+				<legend>Your Face</legend>
+				<label for="avatar">Your Image:</label> <input type="file" id="avatar" name="avatar" required> <br>
+				<label for="preview">Image Preview:</label> <img id="preview" width="10%">
+			</fieldset> <br>
+			<fieldset>
+				<legend>Your General Details</legend>
+				<label for="fullname">Name:</label> <input type="text" id="fullname" name="fullname" placeholder="Your full name" required> <br>
+				<label for="gender">Gender:</label> <input type="radio" id="gender" name="gender" class="cbr" value="Male" required>Male <input type="radio" name="gender" class="cbr" value="Female">Female <br>
+				<label for="age">Age:</label> <input id="age" type="number" min="0" max="99" step="1" value="18" name="age" required> <br>
+				<label for="birthday">Date of birth:</label> <input type="date" id="birthday" name="birthday" required> <br>
+				<label for="color">Favorite color:</label> <input type="color" id="color" name="color" required> <br>
+				<label for="country">Which country:</label> <select id="country" name="country" required> <option value="NS"></option> 
+				<option value="HK">Hong Kong</option> <option value="US">United States of America</option> <option value="CH">China</option> 
+				<option value="JP">Japan</option> <option value="CN">Canada</option> </select>
+			</fieldset> <br>
+			<fieldset>
+				<legend>Your Indicators</legend>
+				<label for="height">Height:</label> <label class="left"> Short </label> <input type="range" min="0" max="100" step="5" value="50" id="height" name="height"> <label class="right"> Tall </label> <br>
+				<label for="salary">Salary:</label> <label class="left"> Poor </label> <input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary"> <label class="right"> Rich </label> <br>
+			</fieldset> <br>
+			<fieldset>
+				<legend>Your Contact Information</legend>
+				<label for="email">Email: </label> <input type="email" id="email" name="email" required> <br>
+				<label for="tel">Mobile: </label> <input type="tel" id="tel" name="tel" required> <br>
+				<label for="adress">Adress: </label> <textarea rows="2" cols="60" id="adress" name="adress" required> </textarea> <br>
+				<label for="method">Method to contact you: </label> <input type="checkbox" id="method" name="method" class="cbr" value="Email"> Email <input type="checkbox" id="method" name="method" class="cbr" value="Whatsapp"> Whatsapp <input type="checkbox" id="method" name="method" class="cbr" value="In-app chat"> In-app chat
+			</fieldset> <br>
+			<input type="submit" name="Submit">
+		</form>
+		<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+	</body>
+</html>
