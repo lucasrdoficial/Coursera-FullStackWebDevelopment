@@ -173,33 +173,38 @@ angular.module('confusionApp')
                                
                            ]
                         }
-                        ];
+                    ];
+    
             var promotions = [
                 {
-                          _id:0,
-                          name:'Weekend Grand Buffet', 
-                          image: 'images/buffet.png',
-                          label:'New',
-                          price:'19.99',
-                          description:'Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person ',
+                      _id:0,
+                      name:'Weekend Grand Buffet', 
+                      image: 'images/buffet.png',
+                      label:'New',
+                      price:'19.99',
+                      description:'Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person ',
                 }
                 
             ];
     
-                this.getDishes = function(){
-                    
-                    return dishes;
-                    
-                };
-    
-                this.getDish = function (index) {
-                    
-                    return dishes[index];
-                };
-    
-                // implement a function named getPromotion
-                // that returns a selected promotion.
-    
+            this.getDishes = function(){
+
+                return dishes;
+
+            };
+
+            this.getDish = function (index) {
+
+                return dishes[index];
+            };
+
+            // implement a function named getPromotion
+            // that returns a selected promotion.
+            this.getPromotion = function (index) {
+
+                return promotions[index];
+                
+            };
                         
         })
 
@@ -242,8 +247,19 @@ angular.module('confusionApp')
             // Implement two functions, one named getLeaders,
             // the other named getLeader(index)
             // Remember this is a factory not a service
+            corpfac.getLeaders = function(){
+
+                return leadership;
+
+            };
+
+            corpfac.getLeader = function (index) {
+
+                return leadership[index];
+                
+            };
     
-    
+            return corpfac;
         })
 
 ;

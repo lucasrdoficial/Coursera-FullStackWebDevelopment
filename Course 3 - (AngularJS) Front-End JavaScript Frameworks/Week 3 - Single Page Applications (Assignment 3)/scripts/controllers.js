@@ -90,10 +90,32 @@ angular.module('confusionApp')
                 $scope.commentForm.$setPristine();
                 
                 $scope.mycomment = {rating:5, comment:"", author:"", date:""};
-            }
+            };
         }])
 
-        // implement the IndexController and About Controller here
+        // implement the IndexController and AboutController here
+        .controller('IndexController', ['$scope', 'menuFactory', 'corporateFactory', function($scope, menuFactory, corporateFactory) {
+            
+            var featuredDish = menuFactory.getDish(0);
+            
+            $scope.featuredDish = featuredDish;
+            
+            var featuredPromotion = menuFactory.getPromotion(0);
+            
+            $scope.featuredPromotion = featuredPromotion;
+            
+            var executiveChef = corporateFactory.getLeader(3);
+            
+            $scope.executiveChef = executiveChef;
+            
+        }])
 
+        .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
+
+            var leaders = corporateFactory.getLeaders();
+            
+            $scope.leaders = leaders;
+            
+        }])
 
 ;
