@@ -1,0 +1,78 @@
+
+<div class="container" ng-controller="IndexController">
+    <div class="row row-content">
+        <div class="col-xs-12 col-sm-3 col-sm-push-9">
+            <p style="padding:20px;"></p>
+            <h3 align="center">Our Lipsmacking Culinary Creations</h3>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-sm-pull-3"> 
+            <!-- Featured Dish -->
+            <div ng-if="!showDish">
+                <h3>{{dishMessage}}</h3>
+            </div>
+            <div class="media" ng-if="showDish">
+                <div class="media-left media-middle">
+                    <img class="media-object img-thumbnail"
+                     src={{dish.image}} alt="Featured Dish">
+                </div>
+                <div class="media-body">
+                    <h2 class="media-heading">{{dish.name}}
+                     <span class="label label-danger">{{dish.label}}</span>
+                     <span class="badge">{{dish.price | currency}}</span>
+                    </h2>
+                     <p>{{dish.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row row-content">
+        <div class="col-xs-12 col-sm-3">
+            <p style="padding:20px;"></p>
+            <h3 align="center">This Month's Promotions</h3>
+        </div>
+        <div class="col-xs-12 col-sm-9">  
+            <!-- Featured Promotion -->
+            <div ng-if="!showProm">
+                <h3>{{promMessage}}</h3>
+            </div>
+            <div class="media" ng-if="showProm">
+                <div class="media-body">
+                    <h2 class="media-heading">{{promotion.name}}
+                     <span class="label label-danger">{{promotion.label}}</span>
+                     <span class="badge">{{promotion.price | currency}}</span>
+                    </h2>
+                     <p>{{promotion.description}}</p>
+                </div>
+                <div class="media-right media-middle">
+                    <img class="media-object img-thumbnail" ng-src={{promotion.image}} alt="Promotion">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-content">
+        <div class="col-xs-12 col-sm-3 col-sm-push-9">
+            <p style="padding:20px;"></p>
+            <h3 align="center">Meet our Culinary Specialists</h3>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+            <!-- Executive Chef -->
+            <div ng-if="!showLeader">
+                <h3>{{leaderMessage}}</h3>
+            </div>
+            <div class="media" ng-if="showLeader">
+               <div class="media-left media-middle">
+                    <img class="media-object img-thumbnail" src={{leader.image}} alt="Executive Chef">
+                </div>
+
+               <div class="media-body">
+                    <h2 class="media-heading">{{leader.name}}<font size="3" color="gray"> {{leader.designation}}</font>
+                    </h2>
+                    <p>{{leader.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
