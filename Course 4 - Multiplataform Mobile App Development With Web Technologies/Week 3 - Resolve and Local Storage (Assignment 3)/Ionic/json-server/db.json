@@ -6,7 +6,7 @@
       "image": "images/uthapizza.png",
       "category": "mains",
       "label": "Hot",
-      "price": "4.99",
+      "price": 4.99,
       "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",
       "comments": [
         {
@@ -38,6 +38,24 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": "",
+          "comment": "Good place to hang out",
+          "author": "Arun",
+          "date": "2016-04-10T02:36:23.386Z"
+        },
+        {
+          "rating": "",
+          "comment": "Sjdjd",
+          "author": "Chrck",
+          "date": "2016-04-10T02:43:32.762Z"
+        },
+        {
+          "rating": "5",
+          "comment": "Bad coding",
+          "author": "Manju",
+          "date": "2016-04-10T03:30:19.499Z"
         }
       ]
     },
@@ -47,7 +65,7 @@
       "image": "images/zucchipakoda.png",
       "category": "appetizer",
       "label": "",
-      "price": "1.99",
+      "price": 1.99,
       "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce",
       "comments": [
         {
@@ -79,6 +97,18 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": "5",
+          "comment": "Cool place",
+          "author": "Arun",
+          "date": "2016-04-10T03:27:35.681Z"
+        },
+        {
+          "rating": "5",
+          "comment": "Manju is a good girl",
+          "author": "Arun",
+          "date": "2016-04-10T03:31:03.687Z"
         }
       ]
     },
@@ -88,7 +118,7 @@
       "image": "images/vadonut.png",
       "category": "appetizer",
       "label": "New",
-      "price": "1.99",
+      "price": 1.99,
       "description": "A quintessential ConFusion experience, is it a vada or is it a donut?",
       "comments": [
         {
@@ -120,6 +150,30 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": "3",
+          "comment": "Good Dish",
+          "author": "Arun",
+          "date": "2016-04-07T18:06:21.987Z"
+        },
+        {
+          "rating": "",
+          "comment": "Great Dish!",
+          "author": "Arun",
+          "date": "2016-04-07T18:14:34.177Z"
+        },
+        {
+          "rating": "1",
+          "comment": "Bad chef",
+          "author": "Manju",
+          "date": "2016-04-10T02:47:34.337Z"
+        },
+        {
+          "rating": "",
+          "comment": "Good name",
+          "author": "Manju",
+          "date": "2016-04-10T02:48:00.023Z"
         }
       ]
     },
@@ -209,19 +263,5 @@
       "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
     }
   ],
-  "feedback": [
-    {
-      "mychannel": "tel",
-      "firstName": "fg",
-      "lastName": "fdg",
-      "agree": true,
-      "email": "dfgfg@asfdf.com",
-      "comments": "gffgfg",
-      "tel": {
-        "areaCode": "335",
-        "number": "45"
-      },
-      "id": 1
-    }
-  ]
+  "feedback": []
 }

@@ -1,0 +1,54 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Register</h1>
+    <button class="button button-clear" ng-click="closeRegister()">Close</button>
+  </ion-header-bar>
+
+  <ion-content>
+    <form id="registerForm" name="registerForm" ng-submit="doRegister()">
+      <div class="list">
+        <label class="item text-center">
+          <span>Your Picture</span>
+        </label>
+        <label class="item text-center">
+          <img class="padding" ng-src="{{registration.imgSrc}}">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="button" ng-click="takePicture()">
+            Take Picture
+          </button>
+        </label>
+        <label class="item">
+          <button class="button button-block button-balanced" type="button" ng-click="choosePicture()">
+            Gallery
+          </button>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="registration.firstname">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="registration.lastname">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="registration.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Telephone Number </span>
+          <input type="tel" ng-model="registration.telnum">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="registration.email">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Register</button>
+        </label>
+      </div>
+    </form>
+
+  </ion-content>
+
+</ion-modal-view>
